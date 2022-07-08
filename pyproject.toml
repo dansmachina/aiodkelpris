@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "aiodkelpris"
+version = "0.0.1"
+description = "aio lib for retrieving Denmark's electricity price"
+authors = ["Alejandro González Pérez <8874974+dansmachina@users.noreply.github.com>"]
+license = "Apache License"
+readme = "README.md"
+repository = "https://github.com/dansmachina/aiodkelpris"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+aiohttp = "^3.8.1"
+loguru = "^0.6.0"
+pydantic = "^1.9.1"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+pre-commit = "^2.19.0"
+black = "^22.6.0"
+flake8 = "^4.0.1"
+mypy = "^0.961"
+pytest-asyncio = "^0.18.3"
+
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.black]
+line_length = 88
+target_version = ["py39"]
+
+[tool.coverage.run]
+branch = true
+source = ["aiodkelpris"]
+
+[tool.coverage.paths]
+source = ["aiodkelpris/"]
+
+[tool.coverage.report]
+fail_under = 75
+skip_covered = true
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == \"__main__\":",
+    "raise NotImplementedError",
+]
+
+[tool.pytest.ini_options]
+minversion = 6.0
+testpaths = "tests"
+asyncio_mode = "strict"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
