@@ -89,4 +89,4 @@ jobs:
             ~/.local
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
       - name: Unit tests
-        run: poetry run pytest
+        run: poetry run pytest /home/runner/work/aiodkelpris/aiodkelpris/aiodkelpris/tests
