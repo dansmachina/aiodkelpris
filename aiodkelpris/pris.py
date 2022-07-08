@@ -22,18 +22,19 @@ class DKElPris:
 
         if price_area not in PRICE_AREA:
             logger.error(
-                "Unknown price area %s. Should be one of %s", price_area, PRICE_AREA
+                "Unknown price area {}. Should be one of {}", price_area, PRICE_AREA
             )
             raise ValueError(f"Invalid price area: {price_area}")
 
     async def _api_get_prices(self, url: str) -> List[Price]:
         assert self._session is not None
+        logger.debug("Requesting: '{}'", url)
         resp = await self._session.get(url)
         if resp.status < 400:
             data = await resp.json()
             return data["records"]
         else:
-            logger.error("Error %s", resp)
+            logger.error("Error {}", resp)
             raise Exception(f"Error {resp}")
 
     async def _retrieve_prices(self, start: str, end: str) -> List[Price]:
@@ -42,10 +43,10 @@ class DKElPris:
         try:
             return await self._api_get_prices(url)
         except asyncio.TimeoutError:
-            logger.warning("Timeout error requesting data from '%s'", url)
+            logger.warning("Timeout error requesting data from '{}'", url)
             raise Exception(f"Error requesting data from '{url}'")
         except aiohttp.ClientError:
-            logger.warning("Client error in '%s'", url)
+            logger.warning("Client error in '{}'", url)
             raise Exception(f"Error requesting data from '{url}'")
 
     async def get_current_price(self) -> Price:
@@ -53,8 +54,6 @@ class DKElPris:
         now_plus_one = now + timedelta(hours=1)
         start = datetime.strftime(now, DATE_TIME_FORMAT)
         end = datetime.strftime(now_plus_one, DATE_TIME_FORMAT)
-        print(start)
-        print(end)
-
+        logger.debug("Time frame requested: {} - {}", start, end)
         price = await self._retrieve_prices(start, end)
         return price[0]

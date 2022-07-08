@@ -6,7 +6,7 @@ repos:
       - id: isort
         name: isort (python)
   - repo: https://github.com/psf/black
-    rev: "21.12b0"
+    rev: "22.6.0"
     hooks:
       - id: black
         name: Format code (black)
@@ -32,7 +32,6 @@ repos:
           - flake8-mutable>=1.2.0
           - flake8-pie>=0.6.1
           - flake8-quotes>=3.2.0
-          - flake8-string-format>=0.3.0
           - flake8-tidy-imports>=4.2.1
           - flake8-variables-names>=0.0.3
           - pep8-naming>=0.11.1
@@ -44,10 +43,10 @@ repos:
         verbose: true
 ci:
   autofix_commit_msg: |
-      [pre-commit.ci] auto fixes from pre-commit.com hooks
-      for more information, see https://pre-commit.ci
+    [pre-commit.ci] auto fixes from pre-commit.com hooks
+    for more information, see https://pre-commit.ci
   autofix_prs: true
-  autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
+  autoupdate_commit_msg: "[pre-commit.ci] pre-commit autoupdate"
   autoupdate_schedule: monthly
   skip: []
   submodules: false
