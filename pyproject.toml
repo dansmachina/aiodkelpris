@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aiodkelpris"
-version = "0.0.1"
+version = "0.1.0"
 description = "aio lib for retrieving Denmark's electricity price"
 authors = ["Alejandro González Pérez <8874974+dansmachina@users.noreply.github.com>"]
 license = "Apache License"
