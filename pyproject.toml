@@ -21,6 +21,7 @@ black = "^22.6.0"
 flake8 = "^4.0.1"
 mypy = "^0.961"
 pytest-asyncio = "^0.18.3"
+isort = "^5.10.1"
 
 
 [tool.isort]
