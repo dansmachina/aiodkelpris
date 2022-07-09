@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/dansmachina/aiodkelpris/compare/v0.1.0...v0.1.1) (2022-07-08)
+
+
+### Bug Fixes
+
+* **logging:** removes prints and adds debugging logs ([#4](https://github.com/dansmachina/aiodkelpris/issues/4)) ([ba1745c](https://github.com/dansmachina/aiodkelpris/commit/ba1745c0adf151da78cdb6d745358b639cdb1285))
+
 ## 0.1.0 (2022-07-08)
 
 
