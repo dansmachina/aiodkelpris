@@ -1,6 +1,6 @@
 PRICE_AREA: list[str] = [
-    "DK1",  # Denmark west of the Great Belt
-    "DK2",  # Denmark east of the Great Belt
+    "DK1",  # Denmark/west of the Great Belt
+    "DK2",  # Denmark/east of the Great Belt
     "NO2",  # Norway/Kristiansand
     "SE3",  # Sweden/Stockholm
     "SE4",  # Sweden/Malmö
