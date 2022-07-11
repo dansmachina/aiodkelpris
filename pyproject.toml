@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aioelpris"
-version = "0.1.1"
+version = "0.2.0"
 description = "An aio library to retrieve some Nordic countries current electricity price."
 authors = ["Alejandro González Pérez <8874974+dansmachina@users.noreply.github.com>"]
 license = "Apache License"
