@@ -1,4 +1,4 @@
 from .core.const import PRICE_AREA
-from .pris import DKElPris
+from .pris import ElPris
 
-__all__ = ("PRICE_AREA", "DKElPris")
+__all__ = ("PRICE_AREA", "ElPris")
