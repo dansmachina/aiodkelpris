@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/dansmachina/aiodkelpris/compare/v0.1.1...v0.2.0) (2022-07-11)
+
+
+### Features
+
+* **logging:** removes loguru for logging ([#7](https://github.com/dansmachina/aiodkelpris/issues/7)) ([f5c5e23](https://github.com/dansmachina/aiodkelpris/commit/f5c5e2312993facebda4c0b9b05c91a59bdd4d18))
+
 ## [0.1.1](https://github.com/dansmachina/aiodkelpris/compare/v0.1.0...v0.1.1) (2022-07-08)
 
 
