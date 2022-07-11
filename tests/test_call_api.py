@@ -3,9 +3,9 @@ from datetime import datetime
 import pytest
 from aiohttp import ClientSession
 
-from aiodkelpris import DKElPris
-from aiodkelpris.core.const import DATE_TIME_FORMAT, DATE_TIME_FORMAT_API, PRICE_AREA
-from aiodkelpris.core.models import Price
+from aioelpris import DKElPris
+from aioelpris.core.const import DATE_TIME_FORMAT, DATE_TIME_FORMAT_API, PRICE_AREA
+from aioelpris.core.models import Price
 
 
 @pytest.mark.asyncio

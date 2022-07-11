@@ -2,16 +2,16 @@ import asyncio
 
 import aiohttp
 
-from aiodkelpris import DKElPris
-from aiodkelpris.core.models import Price
+from aioelpris import DKElPris
+from aioelpris.core.models import Price
 
 
-async def test():
+async def example():
     async with aiohttp.ClientSession() as session:
-        pris = DKElPris(session=session, price_area="DK2")
+        pris = DKElPris(session=session, price_area="SE3")
         price: Price = await pris.get_current_price()
         print(price)
         return price
 
 
-asyncio.run(test())
+asyncio.run(example())
