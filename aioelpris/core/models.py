@@ -7,6 +7,3 @@ class Price(BaseModel):
     PriceArea: str
     SpotPriceDKK: float
     SpotPriceEUR: float
-
-    class Config:
-        orm_mode = True
