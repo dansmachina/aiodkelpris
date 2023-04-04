@@ -55,7 +55,8 @@ jobs:
             ~/.local
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
       - name: Lint check
-        run: poetry run flake8 /home/runner/work/aiodkelpris/aiodkelpris/aiodkelpris
+        run: poetry run flake8 /home/runner/work/aioelpris/aioelpris/aiodkelpris
+        
 
   format:
     needs: install
